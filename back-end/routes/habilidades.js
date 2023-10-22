@@ -4,7 +4,7 @@ const router = express.Router();
 const Habilidades = require('../models/habilidades');
 
 // Rota para obter informações de habilidades
-router.get('/api/habilidades', async (req, res) => {
+router.get('/routes/habilidades', async (req, res) => {
     try {
         const habilidades = await Habilidades.getSkills();
         res.json(habilidades);
@@ -14,7 +14,7 @@ router.get('/api/habilidades', async (req, res) => {
 });
 
 // Rota para criar informações de habilidades
-router.post('/api/habilidades', async (req, res) => {
+router.post('/routes/habilidades', async (req, res) => {
     const info = req.body;
     try {
         const habilidade = await Habilidades.createSkill(info);
@@ -25,7 +25,7 @@ router.post('/api/habilidades', async (req, res) => {
 });
 
 // Rota para atualizar informações de habilidades
-router.put('/api/habilidades/:id', async (req, res) => {
+router.put('/routes/habilidades/:id', async (req, res) => {
     const id = req.params.id;
     const info = req.body;
     try {
@@ -37,7 +37,7 @@ router.put('/api/habilidades/:id', async (req, res) => {
 });
 
 // Rota para excluir informações de habilidades
-router.delete('/api/habilidades/:id', async (req, res) => {
+router.delete('/routes/habilidades/:id', async (req, res) => {
     const id = req.params.id;
     try {
         await Habilidades.deleteSkill(id);

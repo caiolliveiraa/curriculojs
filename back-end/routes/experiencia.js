@@ -4,7 +4,7 @@ const router = express.Router();
 const Experiencia = require('../models/experiencia');
 
 // Rota para obter informações de experiência
-router.get('/api/experiencia', async (req, res) => {
+router.get('/routes/experiencia', async (req, res) => {
     try {
         const experiencia = await Experiencia.getExperience();
         res.json(experiencia);
@@ -14,7 +14,7 @@ router.get('/api/experiencia', async (req, res) => {
 });
 
 // Rota para criar informações de experiência
-router.post('/api/experiencia', async (req, res) => {
+router.post('/routes/experiencia', async (req, res) => {
     const info = req.body;
     try {
         const experiencia = await Experiencia.createExperience(info);
@@ -25,7 +25,7 @@ router.post('/api/experiencia', async (req, res) => {
 });
 
 // Rota para atualizar informações de experiência
-router.put('/api/experiencia/:id', async (req, res) => {
+router.put('/routes/experiencia/:id', async (req, res) => {
     const id = req.params.id;
     const info = req.body;
     try {
@@ -37,7 +37,7 @@ router.put('/api/experiencia/:id', async (req, res) => {
 });
 
 // Rota para excluir informações de experiência
-router.delete('/api/experiencia/:id', async (req, res) => {
+router.delete('/routes/experiencia/:id', async (req, res) => {
     const id = req.params.id;
     try {
         await Experiencia.deleteExperience(id);

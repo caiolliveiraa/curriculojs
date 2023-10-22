@@ -4,7 +4,7 @@ const router = express.Router();
 const Pessoal = require('../models/pessoal');
 
 // Rota para obter informações pessoais
-router.get('/api/pessoal', async (req, res) => {
+router.get('/routes/pessoal', async (req, res) => {
     try {
         const pessoal = await Pessoal.getPersonalInfo();
         res.json(pessoal);
@@ -14,7 +14,7 @@ router.get('/api/pessoal', async (req, res) => {
 });
 
 // Rota para criar informações pessoais
-router.post('/api/pessoal', async (req, res) => {
+router.post('/routes/pessoal', async (req, res) => {
     const info = req.body;
     try {
         const pessoal = await Pessoal.createPersonalInfo(info);
@@ -25,7 +25,7 @@ router.post('/api/pessoal', async (req, res) => {
 });
 
 // Rota para atualizar informações pessoais
-router.put('/api/pessoal/:id', async (req, res) => {
+router.put('/routes/pessoal/:id', async (req, res) => {
     const id = req.params.id;
     const info = req.body;
     try {
@@ -37,7 +37,7 @@ router.put('/api/pessoal/:id', async (req, res) => {
 });
 
 // Rota para excluir informações pessoais
-router.delete('/api/pessoal/:id', async (req, res) => {
+router.delete('/routes/pessoal/:id', async (req, res) => {
     const id = req.params.id;
     try {
         await Pessoal.deletePersonalInfo(id);

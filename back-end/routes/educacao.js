@@ -4,7 +4,7 @@ const router = express.Router();
 const Educacao = require('../models/educacao');
 
 // Rota para obter informações de educação
-router.get('/api/educacao', async (req, res) => {
+router.get('/routes/educacao', async (req, res) => {
     try {
         const educacao = await Educacao.getEducation();
         res.json(educacao);
@@ -14,7 +14,7 @@ router.get('/api/educacao', async (req, res) => {
 });
 
 // Rota para criar informações de educação
-router.post('/api/educacao', async (req, res) => {
+router.post('/routes/educacao', async (req, res) => {
     const info = req.body;
     try {
         const educacao = await Educacao.createEducation(info);
@@ -25,7 +25,7 @@ router.post('/api/educacao', async (req, res) => {
 });
 
 // Rota para atualizar informações de educação
-router.put('/api/educacao/:id', async (req, res) => {
+router.put('/routes/educacao/:id', async (req, res) => {
     const id = req.params.id;
     const info = req.body;
     try {
@@ -37,7 +37,7 @@ router.put('/api/educacao/:id', async (req, res) => {
 });
 
 // Rota para excluir informações de educação
-router.delete('/api/educacao/:id', async (req, res) => {
+router.delete('/routes/educacao/:id', async (req, res) => {
     const id = req.params.id;
     try {
         await Educacao.deleteEducation(id);

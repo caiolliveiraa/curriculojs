@@ -15,7 +15,7 @@ const db = pgp(options);
 // Verifica a conexão com o banco de dados
 db.connect()
     .then(obj => {
-        obj.done(); // Libere a conexão
+        obj.done(); 
         console.log('Conexão com o banco de dados PostgreSQL bem-sucedida.');
     })
     .catch(error => {
