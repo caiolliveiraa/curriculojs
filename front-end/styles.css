@@ -1,0 +1,52 @@
+/* Estilização para o corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilização para os blocos de informações pessoais, educação, experiência e habilidades */
+#pessoal, #educacao, #experiencia, #habilidades {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilização para os cabeçalhos das seções */
+h1{
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+}
+
+/* Estilização para as listas de educação, experiência e habilidades */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Estilização para links */
+a {
+    color: #0078d4;
+    text-decoration: none;
+}
+
+/* Estilização para os elementos fortemente enfatizados */
+strong {
+    font-weight: bold;
+}
+
+/* Estilização para os elementos de resumo */
+#resumo {
+    font-style: italic;
+}
